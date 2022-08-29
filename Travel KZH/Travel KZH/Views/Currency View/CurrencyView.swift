@@ -122,6 +122,7 @@ struct CurrencyView: View {
 				Button("Done") {
 					customKZTAmountIsFocused.toggle()
 				}
+				.font(.headline)
 			}
 		}
     }
