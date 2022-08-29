@@ -67,11 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				26BB738D2874E4EE00748238 /* Travel_KZHApp.swift */,
-				26BB738F2874E4EE00748238 /* ContentView.swift */,
-				260DACA628789A5000AC5D27 /* Glossary.swift */,
-				260DACA42878997500AC5D27 /* DateExtension.swift */,
-				26EBEAAA28779C7600421817 /* UserDefaultsManager.swift */,
-				26A6A2822875DD9300D6DA36 /* MastercardAPI.swift */,
+				2C8C012C28BD06380007F6DB /* Views */,
+				2C8C012D28BD06400007F6DB /* Models */,
+				2C8C012E28BD06470007F6DB /* Utils */,
 				26BB73912874E4EE00748238 /* Assets.xcassets */,
 				26BB73932874E4EE00748238 /* Preview Content */,
 			);
@@ -84,6 +82,48 @@
 				26BB73942874E4EE00748238 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C8C012C28BD06380007F6DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				26BB738F2874E4EE00748238 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C8C012D28BD06400007F6DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				260DACA628789A5000AC5D27 /* Glossary.swift */,
+				26A6A2822875DD9300D6DA36 /* MastercardAPI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C8C012E28BD06470007F6DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C013028BD06520007F6DB /* Dates */,
+				2C8C012F28BD064C0007F6DB /* UserDefaults */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2C8C012F28BD064C0007F6DB /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				26EBEAAA28779C7600421817 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		2C8C013028BD06520007F6DB /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				260DACA42878997500AC5D27 /* DateExtension.swift */,
+			);
+			path = Dates;
 			sourceTree = "<group>";
 		};
 		B683522760BD5CAAE1F217E6 /* Frameworks */ = {
