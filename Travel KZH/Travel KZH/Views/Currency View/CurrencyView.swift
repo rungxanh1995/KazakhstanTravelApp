@@ -35,7 +35,7 @@ struct CurrencyView: View {
 						.keyboardType(.decimalPad)
 						.focused($customKZTAmountIsFocused)
 						
-						Image(systemName: "keyboard")
+						Symbols.keyboard
 							.font(.callout)
 					}
 					.frame(width: nil, height: 45, alignment: .leading)

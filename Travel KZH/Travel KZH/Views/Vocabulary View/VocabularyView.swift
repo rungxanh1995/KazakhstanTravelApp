@@ -27,7 +27,7 @@ struct VocabularyView: View {
 								.font(.system(.callout, design: .monospaced))
 						}
 					} else {
-						Image(systemName: term.icon)
+						Symbols.forGlossaryTerm(term)
 						Text(term.categoryName)
 					}
 					
