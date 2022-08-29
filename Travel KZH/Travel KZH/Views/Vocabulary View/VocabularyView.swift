@@ -19,12 +19,12 @@ struct VocabularyView: View {
 						HStack {
 							Text(englishTranslation)
 								.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-								.font(Font.system(size: 16, design: .default))
+								.font(.system(.callout, design: .default))
 							
 							Spacer()
 							Text(term.russianTranslation!)
 								.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-								.font(Font.system(size: 16, design: .monospaced))
+								.font(.system(.callout, design: .monospaced))
 						}
 					} else {
 						Image(systemName: term.icon)
