@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				26BB738F2874E4EE00748238 /* ContentView.swift */,
-				2C8C013128BD07A50007F6DB /* CurrencyView.swift */,
-				2C8C013328BD083B0007F6DB /* VocabularyView.swift */,
+				2C8C013528BD08B10007F6DB /* Currency View */,
+				2C8C013628BD08C20007F6DB /* Vocabulary View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +130,22 @@
 				260DACA42878997500AC5D27 /* DateExtension.swift */,
 			);
 			path = Dates;
+			sourceTree = "<group>";
+		};
+		2C8C013528BD08B10007F6DB /* Currency View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C013128BD07A50007F6DB /* CurrencyView.swift */,
+			);
+			path = "Currency View";
+			sourceTree = "<group>";
+		};
+		2C8C013628BD08C20007F6DB /* Vocabulary View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C013328BD083B0007F6DB /* VocabularyView.swift */,
+			);
+			path = "Vocabulary View";
 			sourceTree = "<group>";
 		};
 		B683522760BD5CAAE1F217E6 /* Frameworks */ = {
