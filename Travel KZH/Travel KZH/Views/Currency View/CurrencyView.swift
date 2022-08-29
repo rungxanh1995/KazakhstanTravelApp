@@ -128,10 +128,6 @@ struct CurrencyView: View {
     }
 }
 
-private extension CurrencyView {
-	
-}
-
 struct CurrencyView_Previews: PreviewProvider {
     static var previews: some View {
         CurrencyView()
