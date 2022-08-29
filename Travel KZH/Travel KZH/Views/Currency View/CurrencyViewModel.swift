@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// TODO: Remove this if successful in refactoring getCurrentRate()
 import MastercardOAuth1Signer
 
 extension CurrencyView {
