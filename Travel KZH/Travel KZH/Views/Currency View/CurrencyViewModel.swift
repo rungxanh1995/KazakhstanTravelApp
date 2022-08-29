@@ -24,9 +24,15 @@ extension CurrencyView {
 		
 		@Published
 		var displayAlert = false
-
 		
-		// MARK - Update rate provided by Mastercard API
+		private let apiService: ApiService
+		
+		init(apiService: ApiService = ApiServiceImpl()) {
+			self.apiService = apiService
+		}
+		
+		// TODO: Consider refactoring this into `ApiServiceImpl`
+		/// Update rate provided by Mastercard API
 		func getCurrentRate() {
 			// TODO: - Import your certificate in this Xcode project
 			// TODO: - Change the name with the one from your certificate
@@ -42,7 +48,7 @@ extension CurrencyView {
 					// Private Key loaded ✅
 					// TODO: - Edit the Consumer Key with the one from the Mastercard Developer Portal
 					let consumerKey = "YOUR_CONSUMER_KEY_HERE" // from developer portal
-					let url = getURL()
+					let url = apiService.getUrl()
 					
 					do {
 						let header = try OAuth.authorizationHeader(
@@ -98,22 +104,7 @@ extension CurrencyView {
 			}
 		}
 		
-		// MARK - Get and create Mastercard API URL
-		func getURL() -> URL {
-			let cardCurrency = "CHF"
-			let transactionCurrency = "KZT"
-			let date = Date.now.getFormattedDate()
-			
-			var urlString = "https://sandbox.api.mastercard.com/enhanced/settlement/currencyrate/subscribed/summary-rates"
-			urlString += "?rate_date=\(date)"
-			urlString += "&trans_curr=\(transactionCurrency)"
-			urlString += "&trans_amt=1"
-			urlString += "&crdhld_bill_curr=\(cardCurrency)"
-			
-			return URL(string: urlString)!
-		}
-		
-		// MARK - Get Footer Date
+		/// Get Footer Date
 		func getFooterString() -> String {
 			if let date = UserDefaults().getRateDate()?.toDate() {//rateDate?.toDate() {
 				let formattedDate = date.getReadableDate()
@@ -123,7 +114,7 @@ extension CurrencyView {
 			return "Pull to refresh the exchange rate."
 		}
 		
-		// MARK - Get Header Date
+		/// Get Header Date
 		func getHeaderString() -> String? {
 			return rate != 0 ? "Exchange rate \(rate)" : nil
 		}
